@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600&display=swap');
+
+:root {
+    --main-color: rgba(240, 237, 255, 255);
+    --alternate-color: rgba(102, 67, 255, 255);
+    --hover-color: rgb(209, 209, 209);
+    --span-color: #3b3b3b
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    border-bottom: 2px solid var(--hover-color);
+    padding: 13px 0;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+nav label {
+    cursor: pointer;
+    color: tomato;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-left: 4%;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav label span {
+    font-weight: 600;
+    color: var(--span-color);
+}
+
+nav ul {
+    margin-right: 50px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 0.9em;
+    width: 23%;
+}
+
+nav ul li {
+    margin: 0 7%;
+    position: relative;
+}
+
+nav ul li::before {
+    content: '';
+    position: absolute;
+    background-color: var(--span-color);
+    height: 1px;
+    width: 100%;
+    bottom: 3px;
+    transform: scale(0);
+    transition: .5s;
+}
+
+nav ul li:hover::before {
+    transform: scale(1);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--span-color);
+    cursor: pointer;
+}
+
+.button-nav a {
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: 600;
+    background-color: rgba(240, 237, 255, 255);
+    color: rgba(102, 67, 255, 255);
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: .7s;
+}
+
+.button-nav a:nth-child(2) {
+    margin-left: 10px;
+}
+
+.button-nav a:hover {
+    background-color: var(--alternate-color);
+    color: white;
+}
+
+/* Header */
+.header {
+    display: flex;
+    background: url(img/Ok.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    padding: 130px 0 200px 120px;
+}
+
+.header h1 {
+    font-size: 2.7em;
+    color: rgba(29, 18, 72, 255);
+    width: 60%;
+    color: white;
+}
+
+.header h1 span {
+    color: tomato;
+}
+
+.header p {
+    font-size: 1.1em;
+    width: 40%;
+    padding: 30px 0;
+    color: white;
+}
+
+.header a {
+    width: fit-content;
+    text-decoration: none;
+    background-color: tomato;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    transition: .5s;
+}
+
+.header a:hover {
+    background-color: rgb(255, 81, 50);
+}
+
+.header img {
+    position: absolute;
+    right: 120px;
+    top: 20px;
+    width: 400px;
+    height: 400px;
+}
+
+/* Card Service */
+.container-service {
+    padding-bottom: 120px;
+    text-align: center;
+    color: #3b3b3b;
+}
+
+.container-service h1 {
+    padding: 50px 20px 0 20px;
+    margin-bottom: 15px;
+}
+
+.container-service p {
+    padding: 10px 0px;
+}
+
+.container-card-service {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    place-items: center;
+    padding: 0 100px;
+}
+
+.card-service {
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 50px;
+    padding: 30px;
+    width: 80%;
+    color: #3b3b3b;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: 1s;
+}
+
+.card-service i {
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 20px;
+}
+
+.card-service.show {
+    opacity: 1;
+}
+
+/* Card Price */
+
+.comment h1 {
+    text-align: center;
+    color: #3b3b3b;
+    padding: 30px 4% 0 4%;
+}
+
+.comment p {
+    text-align: center;
+    padding: 20px 10% 0 10%;
+    color: #3b3b3b;
+    margin-bottom: 30px;
+}
